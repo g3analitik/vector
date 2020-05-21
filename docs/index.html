@@ -32,15 +32,29 @@
 		<link type="text/css" rel="stylesheet" href="//lib.analitik.my/jQuery.mmenu/7.0.3/jquery.mmenu.all.css"/>
 -->
 
+		<link type="text/css" rel="stylesheet" href="//lib.analitik.my/font/fira_code/font.css"/>
+		<!--
+
 		<link rel="stylesheet" href="//lib.analitik.my/font/ibm-plex/css/ibm-type.min.css" type="text/css" charset="utf-8" />
 		<link type="text/css" rel="stylesheet" href="//lib.analitik.my/clarity-icons/0.9.15/clarity-icons.min.css"/>
 		<link type="text/css" rel="stylesheet" href="//lib.analitik.my/clarity-ui/0.9.15/clarity-ui.min.css"/>
+		-->
 
 		<script type="text/javascript" src="//lib.analitik.my/jquery/jquery-2.2.0.min.js"></script>
+
+<script type="text/javascript" src="//lib.analitik.my/d3/5.15.1/d3.min.js"></script>
+<script type="text/javascript" src="//lib.analitik.my/d3-array/2.4.0/d3-array.min.js"></script>
+<script type="text/javascript" src="//lib.analitik.my/d3/4.12.0/d3-selection-multi.v1.min.js"></script>
+<script type="text/javascript" src="//lib.analitik.my/d3/plugins/d3.comparator.js"></script>
+<script type="text/javascript" src="//lib.analitik.my/chroma/0.6.3/chroma.min.js"></script>
+
+<!--
 		<script type="text/javascript" src="//lib.analitik.my/d3/4.12.0/d3.v4.min.js"></script>
 		<script type="text/javascript" src="//lib.analitik.my/d3/4.12.0/d3-selection-multi.v1.min.js"></script>
 		<script type="text/javascript" src="//lib.analitik.my/d3/plugins/d3.comparator.js"></script>
 		<script type="text/javascript" src="//lib.analitik.my/chroma/0.6.3/chroma.min.js"></script>
+-->
+
 		<script type="text/javascript" src="//lib.analitik.my/URI/1.14.1/src/URI.min.js"></script>
 		<script type="text/javascript" src="//lib.analitik.my/moment/2.17.1/moment.min.js"></script>
 		<script type="text/javascript" src="//lib.analitik.my/font/awesome/5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
@@ -50,19 +64,24 @@
 
 <!--
 		<script type="text/javascript" src="//lib.analitik.my/jQuery.mmenu/7.0.3/jquery.mmenu.all.js"></script>
--->
 		<script type="text/javascript" src="//lib.analitik.my/clarity-icons/0.9.15/clarity-icons.min.js"></script>
+-->
 
 		<style type="text/css">
 
 
 			body {
 
-				font-family: 'ibm-plex-sans', sans-serif !important;
-				min-height:768px;
+				font-family: 'Fira Code', 'Helvetica Neue', 'Helvetica', sans-serif;
+				font-variation-settings: "wght" 400;
 
+				/*
+				min-height:768px;
 				background-color: #061A33;
-				color: #fff;
+				*/
+				background:#0E0D0E;
+				color: lime;
+				overflow:hidden;
 
 			}
 
@@ -87,8 +106,23 @@
 
 <!--
 <div class="container" style="max-height:80vh;max-width:80vw">
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2Gg6Seob5Mg?rel=0" allowfullscreen></iframe>
+</div>
 -->
-<div class="container" style="padding-top:30px">
+
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%">
+    <source src="https://static.aga.my/videos/background/earth-hologram.mp4" type="video/mp4">
+  </video>
+</header>
+
+
+
+<div class="container" style="position:absolute;top:0;left:0;z-index:9999999;width:100%;height:100%;padding-top:40px;">
 
 <!--
 	width="120px"
@@ -107,12 +141,12 @@
 <g transform="translate(-16,0)">
 	<g id="vectors" transform="translate(116,48)">
 		<g>
-			<path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M36.482-21.84c0,0,0.18,0.311,0.492,0.854
+			<path transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M36.482-21.84c0,0,0.18,0.311,0.492,0.854
 			c0.324,0.537,0.734,1.336,1.221,2.295c0.947,1.931,2.035,4.6,2.789,7.371c0.773,2.768,1.205,5.615,1.379,7.754
 			c0.039,0.535,0.08,1.025,0.105,1.459c0.01,0.436,0.021,0.814,0.029,1.127C42.514-0.356,42.52,0,42.52,0H31.113
 			c0,0-0.006-0.263-0.02-0.722c-0.006-0.229-0.012-0.508-0.02-0.828c-0.023-0.318-0.051-0.679-0.08-1.07
 			c-0.125-1.568-0.441-3.648-1.006-5.668c-0.551-2.024-1.346-3.973-2.037-5.385c-0.357-0.699-0.652-1.285-0.891-1.677
-			c-0.23-0.397-0.359-0.626-0.359-0.626L36.482-21.84z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M36.482-21.84c0,0,0.18,0.311,0.492,0.854c0.324,0.537,0.734,1.336,1.221,2.295
+			c-0.23-0.397-0.359-0.626-0.359-0.626L36.482-21.84z"></path><path transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M36.482-21.84c0,0,0.18,0.311,0.492,0.854c0.324,0.537,0.734,1.336,1.221,2.295
 			c0.947,1.931,2.035,4.6,2.789,7.371c0.773,2.768,1.205,5.615,1.379,7.754c0.039,0.535,0.08,1.025,0.105,1.459
 			c0.01,0.436,0.021,0.814,0.029,1.127C42.514-0.356,42.52,0,42.52,0H31.113c0,0-0.006-0.263-0.02-0.722
 			c-0.006-0.229-0.012-0.508-0.02-0.828c-0.023-0.318-0.051-0.679-0.08-1.07c-0.125-1.568-0.441-3.648-1.006-5.668
@@ -131,7 +165,7 @@
 			c0.17,0.133,0.254,0.211,0.254,0.211l-4.299,5.16c0,0-0.07-0.067-0.213-0.178c-0.145-0.112-0.354-0.277-0.619-0.486
 			c-0.523-0.428-1.309-0.994-2.268-1.646c-1.928-1.293-4.668-2.775-7.582-3.835c-2.914-1.055-5.969-1.683-8.275-1.922
 			c-0.576-0.073-1.107-0.095-1.578-0.136c-0.469-0.043-0.879-0.049-1.218-0.058c-0.677-0.017-1.062-0.026-1.062-0.026L0.106-42.517
-			z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-21.841-36.482c0,0,0.312-0.179,0.854-0.493c0.537-0.322,1.334-0.732,2.294-1.218
+			z"></path><path transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-21.841-36.482c0,0,0.312-0.179,0.854-0.493c0.537-0.322,1.334-0.732,2.294-1.218
 			c1.931-0.948,4.599-2.036,7.372-2.791c2.767-0.773,5.614-1.206,7.753-1.377c0.534-0.04,1.025-0.081,1.46-0.104
 			c0.436-0.013,0.814-0.023,1.127-0.031C-0.356-42.511,0-42.52,0-42.52v11.407c0,0-0.262,0.007-0.721,0.019
 			c-0.229,0.006-0.509,0.014-0.828,0.021c-0.318,0.023-0.68,0.049-1.071,0.078c-1.567,0.127-3.647,0.441-5.668,1.008
@@ -150,7 +184,7 @@
 			c0.133-0.168,0.211-0.252,0.211-0.252l5.159,4.299c0,0-0.067,0.07-0.179,0.213s-0.275,0.353-0.486,0.617
 			c-0.427,0.525-0.994,1.311-1.646,2.27c-1.291,1.928-2.775,4.666-3.834,7.58c-1.055,2.916-1.683,5.969-1.922,8.277
 			c-0.072,0.574-0.094,1.107-0.135,1.577c-0.044,0.47-0.051,0.88-0.059,1.218c-0.017,0.676-0.025,1.063-0.025,1.063L-42.518-0.107z
-			"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-36.482,21.842c0,0-0.18-0.312-0.492-0.854c-0.324-0.538-0.733-1.335-1.219-2.295
+			"></path><path transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-36.482,21.842c0,0-0.18-0.312-0.492-0.854c-0.324-0.538-0.733-1.335-1.219-2.295
 			c-0.948-1.93-2.036-4.6-2.791-7.371c-0.774-2.768-1.206-5.615-1.377-7.755c-0.041-0.533-0.08-1.024-0.105-1.458
 			c-0.012-0.437-0.022-0.815-0.031-1.127C-42.511,0.358-42.52,0-42.52,0h11.406c0,0,0.008,0.263,0.02,0.723
 			c0.005,0.229,0.012,0.508,0.02,0.827c0.023,0.318,0.051,0.678,0.08,1.07c0.126,1.568,0.441,3.647,1.007,5.669
@@ -162,21 +196,27 @@
 			c0.059,0.174,0.145,0.427,0.255,0.752c0.1,0.326,0.26,0.71,0.433,1.153c0.163,0.449,0.397,0.933,0.637,1.468
 			c0.511,1.054,1.135,2.276,1.961,3.492c0.813,1.219,1.778,2.461,2.846,3.607c2.117,2.319,4.699,4.159,6.744,5.297
 			c0.252,0.154,0.502,0.28,0.742,0.401c0.236,0.12,0.462,0.236,0.674,0.345c0.43,0.205,0.812,0.368,1.122,0.513
-			c0.31,0.146,0.567,0.228,0.735,0.3c0.17,0.067,0.26,0.103,0.26,0.103L-11.89,30.823z"></path><path transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;" d="M-0.107,42.518c0,0-0.456-0.012-1.26-0.029
+			c0.31,0.146,0.567,0.228,0.735,0.3c0.17,0.067,0.26,0.103,0.26,0.103L-11.89,30.823z"></path><path
+				transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;"
+				d="M-0.107,42.518c0,0-0.456-0.012-1.26-0.029
 			c-0.398-0.011-0.885-0.021-1.442-0.069c-0.558-0.048-1.188-0.077-1.872-0.161c-2.738-0.285-6.371-1.029-9.836-2.285
 			c-3.466-1.257-6.721-3.021-9.008-4.556c-1.14-0.772-2.069-1.448-2.693-1.953c-0.315-0.251-0.563-0.446-0.732-0.577
 			c-0.17-0.135-0.253-0.212-0.253-0.212l4.299-5.158c0,0,0.071,0.065,0.214,0.176c0.142,0.112,0.352,0.277,0.617,0.485
 			c0.525,0.429,1.309,0.996,2.269,1.648c1.927,1.291,4.667,2.776,7.581,3.834c2.916,1.055,5.968,1.681,8.276,1.922
-			c0.575,0.074,1.106,0.094,1.577,0.135c0.47,0.044,0.881,0.051,1.219,0.059c0.676,0.017,1.062,0.025,1.062,0.025L-0.107,42.518z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M21.842,36.482c0,0-0.311,0.18-0.854,0.492
+			c0.575,0.074,1.106,0.094,1.577,0.135c0.47,0.044,0.881,0.051,1.219,0.059c0.676,0.017,1.062,0.025,1.062,0.025L-0.107,42.518z"></path><path transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M21.842,36.482c0,0-0.311,0.18-0.854,0.492
 			c-0.539,0.323-1.336,0.734-2.297,1.221c-1.93,0.947-4.598,2.035-7.369,2.79c-2.77,0.773-5.617,1.205-7.754,1.377
 			c-0.535,0.041-1.027,0.081-1.461,0.104c-0.434,0.013-0.812,0.023-1.125,0.031C0.358,42.51,0,42.52,0,42.52V31.113
 			c0,0,0.262-0.007,0.723-0.018c0.229-0.006,0.507-0.013,0.826-0.021c0.32-0.023,0.68-0.051,1.072-0.079
 			c1.566-0.128,3.648-0.442,5.668-1.008c2.025-0.55,3.973-1.345,5.383-2.036c0.701-0.357,1.287-0.653,1.678-0.893
-			c0.398-0.228,0.625-0.358,0.625-0.358L21.842,36.482z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M21.842,36.482c0,0-0.311,0.18-0.854,0.492c-0.539,0.323-1.336,0.734-2.297,1.221
+			c0.398-0.228,0.625-0.358,0.625-0.358L21.842,36.482z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M21.842,36.482c0,0-0.311,0.18-0.854,0.492c-0.539,0.323-1.336,0.734-2.297,1.221
 			c-1.93,0.947-4.598,2.035-7.369,2.79c-2.77,0.773-5.617,1.205-7.754,1.377c-0.535,0.041-1.027,0.081-1.461,0.104
 			c-0.434,0.013-0.812,0.023-1.125,0.031C0.358,42.51,0,42.52,0,42.52V31.113c0,0,0.262-0.007,0.723-0.018
 			c0.229-0.006,0.507-0.013,0.826-0.021c0.32-0.023,0.68-0.051,1.072-0.079c1.566-0.128,3.648-0.442,5.668-1.008
-			c2.025-0.55,3.973-1.345,5.383-2.036c0.701-0.357,1.287-0.653,1.678-0.893c0.398-0.228,0.625-0.358,0.625-0.358L21.842,36.482z"></path><path transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;" d="M30.82,11.891c0,0-0.041,0.108-0.123,0.313
+			c2.025-0.55,3.973-1.345,5.383-2.036c0.701-0.357,1.287-0.653,1.678-0.893c0.398-0.228,0.625-0.358,0.625-0.358L21.842,36.482z"></path><path
+				transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;"
+				d="M30.82,11.891c0,0-0.041,0.108-0.123,0.313
 			c-0.084,0.2-0.186,0.507-0.357,0.878s-0.369,0.827-0.613,1.342c-0.129,0.253-0.268,0.522-0.412,0.808s-0.299,0.583-0.479,0.886
 			c-1.359,2.445-3.559,5.523-6.326,8.052c-1.367,1.274-2.846,2.426-4.307,3.396c-1.453,0.984-2.91,1.737-4.172,2.345
 			c-0.641,0.288-1.221,0.563-1.754,0.761c-0.531,0.209-0.992,0.396-1.383,0.518c-0.389,0.131-0.691,0.234-0.898,0.304
@@ -184,14 +224,20 @@
 			c0.326-0.102,0.711-0.26,1.152-0.436c0.449-0.161,0.934-0.396,1.469-0.634c1.053-0.512,2.275-1.136,3.49-1.963
 			c1.223-0.812,2.461-1.778,3.609-2.844c2.32-2.117,4.158-4.7,5.299-6.744c0.15-0.251,0.277-0.503,0.398-0.742
 			c0.121-0.238,0.238-0.463,0.348-0.675c0.203-0.431,0.365-0.812,0.51-1.122c0.146-0.311,0.229-0.566,0.301-0.734
-			c0.066-0.17,0.104-0.262,0.104-0.262L30.82,11.891z"></path><path transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;" d="M42.52,0.107c0,0-0.012,0.459-0.031,1.261
+			c0.066-0.17,0.104-0.262,0.104-0.262L30.82,11.891z"></path><path
+				transform="rotate(0)" style="fill: cyan; stroke: rgb(255, 255, 255); stroke-width: 0; stroke-miterlimit: 10; fill-opacity: 0; stroke-opacity: 0;"
+				d="M42.52,0.107c0,0-0.012,0.459-0.031,1.261
 			c-0.01,0.399-0.02,0.887-0.068,1.443c-0.047,0.557-0.076,1.188-0.16,1.87c-0.285,2.741-1.031,6.371-2.287,9.837
 			c-1.256,3.465-3.02,6.721-4.555,9.008c-0.771,1.141-1.449,2.069-1.955,2.693c-0.248,0.315-0.443,0.562-0.576,0.732
 			s-0.213,0.253-0.213,0.253l-5.158-4.298c0,0,0.066-0.071,0.178-0.214c0.111-0.144,0.275-0.353,0.486-0.619
 			c0.428-0.523,0.994-1.308,1.646-2.269c1.293-1.926,2.775-4.665,3.834-7.579c1.055-2.917,1.684-5.969,1.924-8.278
-			c0.072-0.574,0.092-1.106,0.135-1.576c0.043-0.471,0.049-0.88,0.057-1.219c0.018-0.677,0.027-1.062,0.027-1.062L42.52,0.107z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M0.004,9.779c-5.496,0-9.967-4.379-9.967-9.76c0-5.383,4.471-9.762,9.967-9.762
+			c0.072-0.574,0.092-1.106,0.135-1.576c0.043-0.471,0.049-0.88,0.057-1.219c0.018-0.677,0.027-1.062,0.027-1.062L42.52,0.107z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M0.004,9.779c-5.496,0-9.967-4.379-9.967-9.76c0-5.383,4.471-9.762,9.967-9.762
 			c5.494,0,9.965,4.379,9.965,9.762C9.969,5.4,5.498,9.779,0.004,9.779z M0.004-9.536c-5.379,0-9.756,4.286-9.756,9.555
-			c0,5.267,4.377,9.553,9.756,9.553c5.377,0,9.754-4.286,9.754-9.553C9.758-5.25,5.381-9.536,0.004-9.536z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M23.953,30.025l-0.033-0.041l-8.414-10.502l0.498-0.382
+			c0,5.267,4.377,9.553,9.756,9.553c5.377,0,9.754-4.286,9.754-9.553C9.758-5.25,5.381-9.536,0.004-9.536z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M23.953,30.025l-0.033-0.041l-8.414-10.502l0.498-0.382
 			c0.08-0.07,0.176-0.148,0.279-0.237c0.24-0.201,0.541-0.452,0.861-0.746c1.053-0.938,2.18-2.166,3.086-3.366
 			c0.924-1.223,1.801-2.632,2.4-3.869c0.262-0.527,0.467-0.983,0.633-1.36l0.232-0.573l0.049,0.018l12.689,4.87l-0.348,0.857
 			c-0.209,0.476-0.533,1.21-0.973,2.094c-0.947,1.935-2.295,4.104-3.699,5.952c-1.383,1.834-3.117,3.726-4.754,5.191
@@ -199,13 +245,17 @@
 			l0.658-0.511c0.084-0.07,0.18-0.15,0.281-0.234c0.408-0.339,0.914-0.762,1.479-1.278c1.635-1.463,3.361-3.35,4.742-5.179
 			c1.398-1.843,2.744-4.007,3.689-5.937c0.438-0.881,0.764-1.614,0.969-2.088l0.311-0.761L23.555,9.081l-0.191,0.48
 			c-0.17,0.377-0.375,0.837-0.637,1.365c-0.604,1.242-1.482,2.658-2.412,3.885c-0.91,1.206-2.041,2.438-3.098,3.382
-			c-0.324,0.295-0.623,0.547-0.863,0.748c-0.105,0.089-0.199,0.168-0.281,0.238L15.654,19.499z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-2.209,38.052l-0.054-0.005c0,0-0.323-0.021-0.89-0.067l-1.02-0.088l-1.319-0.168
+			c-0.324,0.295-0.623,0.547-0.863,0.748c-0.105,0.089-0.199,0.168-0.281,0.238L15.654,19.499z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M-2.209,38.052l-0.054-0.005c0,0-0.323-0.021-0.89-0.067l-1.02-0.088l-1.319-0.168
 			c-2.257-0.309-4.783-0.899-6.931-1.619c-2.143-0.702-4.514-1.731-6.506-2.823l-1.15-0.646l-1.657-1.035l0.029-0.043
 			l7.601-11.08l1.096,0.681l0.746,0.42c1.299,0.71,2.84,1.379,4.225,1.832c1.387,0.465,3.021,0.846,4.484,1.048l0.854,0.113
 			l0.658,0.052c0.365,0.032,0.575,0.048,0.575,0.048l0.052,0.004l-0.003,0.051L-2.209,38.052z M-21.588,31.571l1.565,0.976
 			l1.147,0.646c1.984,1.089,4.35,2.115,6.486,2.814c2.143,0.719,4.662,1.307,6.912,1.615l1.316,0.169l1.018,0.086
 			c0.431,0.037,0.721,0.058,0.835,0.065l0.78-13.173c-0.083-0.007-0.264-0.022-0.525-0.043l-0.66-0.054l-0.855-0.111
-			c-1.471-0.204-3.113-0.587-4.505-1.054c-1.392-0.455-2.937-1.125-4.241-1.841l-0.75-0.42l-1.011-0.627L-21.588,31.571z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M-13.643-20.737l-0.029-0.043l-7.354-11.24l0.798-0.496
+			c-1.471-0.204-3.113-0.587-4.505-1.054c-1.392-0.455-2.937-1.125-4.241-1.841l-0.75-0.42l-1.011-0.627L-21.588,31.571z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M-13.643-20.737l-0.029-0.043l-7.354-11.24l0.798-0.496
 			c0.556-0.322,1.233-0.71,2.048-1.137c1.929-1.018,4.326-1.992,6.578-2.676c2.156-0.665,4.688-1.197,6.948-1.461
 			c0.14-0.016,0.276-0.031,0.408-0.046c0.325-0.036,0.631-0.072,0.911-0.096l1.021-0.066c0.566-0.036,0.89-0.052,0.89-0.052
 			l0.053-0.002l0.001,0.053l0.513,13.338l-0.052,0.003c0,0-0.211,0.013-0.578,0.036l-0.662,0.041
@@ -215,7 +265,9 @@
 			c1.405-0.433,3.062-0.78,4.545-0.954c0.128-0.014,0.252-0.028,0.371-0.043c0.173-0.021,0.336-0.039,0.486-0.053l0.664-0.041
 			c0.261-0.016,0.443-0.027,0.525-0.031l-0.504-13.186c-0.113,0.005-0.403,0.021-0.836,0.047l-1.02,0.066
 			c-0.278,0.023-0.583,0.059-0.906,0.096c-0.133,0.016-0.27,0.031-0.408,0.046c-2.254,0.263-4.779,0.793-6.928,1.457
-			c-2.248,0.681-4.638,1.654-6.562,2.669c-0.812,0.425-1.489,0.811-2.043,1.133L-20.879-31.989z"></path><path transform="rotate(0)" style="fill: cyan; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;" d="M23.689-8.418l-0.229-0.576c-0.117-0.332-0.326-0.79-0.57-1.323l-0.023-0.052
+			c-2.248,0.681-4.638,1.654-6.562,2.669c-0.812,0.425-1.489,0.811-2.043,1.133L-20.879-31.989z"></path><path
+				transform="rotate(0)" style="fill: orange; stroke-width: 0; fill-opacity: 0; stroke-opacity: 0;"
+				d="M23.689-8.418l-0.229-0.576c-0.117-0.332-0.326-0.79-0.57-1.323l-0.023-0.052
 			c-0.627-1.326-1.469-2.748-2.311-3.901c-0.842-1.168-1.936-2.417-3.006-3.427l-0.625-0.582l-0.502-0.422
 			c-0.279-0.236-0.439-0.37-0.439-0.37l-0.037-0.032l8.664-10.371l0.041,0.033c0,0,0.248,0.205,0.678,0.566l0.771,0.654
 			l0.965,0.894c1.648,1.555,3.34,3.485,4.645,5.296c1.311,1.795,2.615,3.998,3.578,6.042c0.463,1.004,0.746,1.657,0.918,2.12
@@ -232,7 +284,7 @@
 
 		<g transform="translate(50,-20)">
 
-			<g id="animate-outline">
+			<g id="animate-outline" fill="#b6de2b">
 				<g class="vector" transform="translate(0,20)">
 
 					<!--
@@ -241,7 +293,7 @@
 					-->
 					<g transform="translate(0,0)">
 						<g transform="scale(1)">
-							<g  style="fill:#1064ED;" opacity=".75">
+							<g  style="opacity=".75">
 
 								<path class="vector-O" fill-opacity="0" d="M72.76,39.896l5.442-2.671c0.741-0.376,1.546-0.564,2.412-0.564c0.847,0,1.646,0.188,2.397,0.563
 									l5.384,2.671c1.184,0.57,1.776,1.529,1.776,2.888c0,0.645-0.169,1.226-0.507,1.739c-0.336,0.514-0.76,0.903-1.27,1.163
@@ -271,7 +323,7 @@
 
 					<g transform="translate(35,-15)">
 						<g transform="scale(1)">
-							<g  style="fill:#1064ED;" opacity=".75">
+							<g  style="opacity=".75">
 
 								<path class="vector-C" fill-opacity="0" d="M57.333,47.675h3.266c0.251,0,0.468,0.088,0.651,0.265c0.184,0.176,0.274,0.39,0.274,0.641
 									c0,0.252-0.091,0.466-0.274,0.642s-0.4,0.264-0.651,0.264h-3.384c-0.431,0-0.876-0.136-1.336-0.409
@@ -546,9 +598,12 @@ if (document.location.protocol != 'https:' && !document.location.host.match(/dia
 }
 
 
-function getRandomInt(min, max) {
+function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+dbg=1;
 
 var dots;
 var dots2;
@@ -566,9 +621,27 @@ var c = [[2,81.57,45.418,0.557],[0,84.217,45.555,0.557],[0,80.684,48.51,0.557],[
 	});
 
 
-	$(document).ready(function(){
+	//console.log('c',c);
+	d3.shuffle(c);
+	c = c.slice(0,100);
 
-		dbg=1;
+
+	var cx = d3.select('.circle-anim-1').selectAll('circle').data(c);
+	cx.exit().remove();
+	cx.enter()
+		.append('circle')
+			.attrs({
+				cx:function(d){ return random(0,d[1] - 150) },
+				cy:function(d){ return d[2] },
+				r:function(d){ return d3.max([0,d[3]]) },
+				fill:'cyan',
+				opacity:0,
+			});
+
+
+
+
+	$(document).ready(function(){
 
 
 		render2();
@@ -576,65 +649,59 @@ var c = [[2,81.57,45.418,0.557],[0,84.217,45.555,0.557],[0,80.684,48.51,0.557],[
 
 		function render2()	{
 
-			var cx = d3.select('.circle-anim-1').selectAll('circle').data(c);
-			cx.exit().remove();
-			cx.enter()
-				.append('circle')
-					.attrs({
-						cx:function(d){ return getRandomInt(0,d[1] - 150) },
-						cy:function(d){ return d[2] },
-						r:function(d){ return d3.max([0,d[3]]) },
-						fill:'cyan',
-						opacity:0,
-					});
 
-			d3.select('.circle-anim-1').selectAll("circle").transition()
-		   	.delay(function(d, i) { return i * getRandomInt(i,10); })
-		    .on("start", function repeat() {
-		        d3.active(this)
-		            .attrs({
-				        	cx			: function(d){ return getRandomInt(0,d[1] - 150) },
-									cy			: function(d){ return d[2] },
-									r				: function(d){ return d3.max([0,d[3]]) },
-				        	opacity	: 0,
-				        	fill		: 'cyan'
-		            })
-		          .transition()
-		          	//.delay(function(d,i){ return 0 + getRandomInt(100,2000) })
-		          	//.duration(1000)
-		          	.delay(function(d,i){ return 0 + getRandomInt(100,1000) })
-		          	//.duration(500)
-		          	.duration(1000)
-		          	.ease(d3.shuffle([
-									//d3.easeElastic,
-									//d3.easeBounce,
-									d3.easeLinear,
-									d3.easeSin,
-									d3.easeQuad,
-									d3.easeCubic,
-									d3.easePoly,
-									d3.easeCircle,
-									d3.easeExp,
-									d3.easeBack
-		          	])[0])
-				        	.attr('cx', function(d){ return d[1] })
-					        .attr('fill',function(d){ return d[0] })
-					        .attr('opacity',1)
+			d3.select('.circle-anim-1')
+			.selectAll("circle")
+				.transition()
+			   	//.delay(function(d, i) { return i * random(i,100); })
+			    .on("start", function repeat() {
 
-		          .transition()
-		          	.ease(d3.easeCubic)
-		          		.attr('r', function(d){ return d[0]=='#3F81B8' ? d[3] : d[3]*5 })
-			          	.attr('opacity',0)
-		          		//.attr('cx', function(d,i){ return d[0]=='#3F81B8' ? d[1]+30 : d[1]  })
-		          		.attr('cx', function(d,i){ return d[0]=='#3F81B8' ? d[1]+100 : d[1]  })
-		          		//.attr('fill', function(d){ return d[0]=='#3F81B8' ? 'lime' : d[0] })
-		          		.attr('fill', function(d){ return d[0]=='#3F81B8' ? 'white' : d[0] })
+			        d3.active(this)
+			            .attrs({
+					        	cx			: function(d){ return random(0,d[1] - 150) },
+										cy			: function(d){ return d[2] },
+										r				: function(d){ return d3.max([0,d[3]]) },
+					        	opacity	: 0,
+					        	fill		: 'lime'
+			            })
+			          .transition()
+			          	//.delay(function(d,i){ return 0 + random(100,2000) })
+			          	//.duration(1000)
+			          	.delay(function(d,i){ return 0 + random(100,1000) })
+			          	//.duration(500)
+			          	.duration(2000)
+			          	.ease(d3.shuffle([
+										//d3.easeElastic,
+										//d3.easeBounce,
+										d3.easeLinear,
+//										d3.easeSin,
+//										d3.easeQuad,
+//										d3.easeCubic,
+//										d3.easePoly,
+//										d3.easeCircle,
+//										d3.easeExp,
+//										d3.easeBack
+			          	])[0])
+					        	.attr('cx', function(d){ return d[1] })
+						        .attr('fill',function(d){ return d[0] })
+						        .attr('opacity',1)
 
-		          .transition()
-		          	.delay( 500 )
-		            .on("start", repeat);
+			          .transition()
+			          	//.ease(d3.easeCubic)
+			          	.ease(d3.easeLinear)
+			          	.duration(function(d){ return d[0]=='#3F81B8' ? 1000 : 400 })
+			          		.attr('r', function(d){ return d[0]=='#3F81B8' ? d[3] : d[3]*10 })
+				          	.attr('opacity',0)
+			          		//.attr('cx', function(d,i){ return d[0]=='#3F81B8' ? d[1]+30 : d[1]  })
+			          		.attr('cx', function(d,i){ return d[0]=='#3F81B8' ? d[1]+100 : d[1]  })
+			          		//.attr('fill', function(d){ return d[0]=='#3F81B8' ? 'lime' : d[0] })
+			          		.attr('fill', function(d){ return d[0]=='#3F81B8' ? 'white' : d[0] })
 
-		      });
+			          .transition()
+			          	//.delay( 100 )
+			            .on("start", repeat);
+
+			      });
 
 
 		}
@@ -708,12 +775,12 @@ if (RTCPeerConnection) (function () {
 	//--------------
 	// internet ip
 	//--------------
-	//d3.json('/api/ip/', function(err,res)	{
-	d3.json('https://api.aga.my/ip/', function(err,res)	{
-		if (err) throw err;
-		console.log('res',res);
-		d3.select('.net-ip').html(res['HTTP_X_REAL_IP']);
-	});
+//	//d3.json('/api/ip/', function(err,res)	{
+//	d3.json('https://api.aga.my/ip/', function(err,res)	{
+//		if (err) throw err;
+//		console.log('res',res);
+//		d3.select('.net-ip').html(res['HTTP_X_REAL_IP']);
+//	});
 
 	//----------------------------------------
 	// animate outlines
@@ -749,9 +816,9 @@ if (RTCPeerConnection) (function () {
 	    		'stroke-width'			: .3,
 	    	})
 	    	.transition()
-	    		.delay(function(d,i){ return i * getRandomInt(100,500) })
-	    		//.duration(function(d,i){ return i + getRandomInt(8000,10000)  })
-	    		.duration((d,i)=>i + getRandomInt(1000,5000)  )
+	    		.delay(function(d,i){ return i * random(100,500) })
+	    		//.duration(function(d,i){ return i + random(8000,10000)  })
+	    		.duration((d,i)=>i + random(1000,5000)  )
 	    		.styles({
 						'stroke-dasharray'	: function(d,i){ return d.strokeDashoffset+' '+d.strokeDashoffset; },
 						'fill'							: function(d,i){ return d.fill; },
@@ -789,10 +856,11 @@ if (RTCPeerConnection) (function () {
 				'fill-opacity':0,
 				'stroke-opacity':0,
 				'stroke-width':.1,
-				fill:'cyan',
+				fill:(d,i)=>d3.shuffle(chroma.brewer.Spectral)[0],
+				//fill:'#b6de2b',
     	})
 			.transition()
-			.delay(function(d,i){ return getRandomInt(0,1000) })
+			.delay(function(d,i){ return random(0,1000) })
 		  .on("start", function repeat() {
 
 		      d3.active(this)
@@ -804,8 +872,8 @@ if (RTCPeerConnection) (function () {
 //							fill:'cyan',
 //		      	})
 		        .transition()
-							.delay(function(d,i){ return getRandomInt(0,1000) })
-							.duration(function(d,i){ return getRandomInt(2000,10000) })
+							.delay(function(d,i){ return random(0,1000) })
+							.duration(function(d,i){ return random(2000,10000) })
 		        	.ease(
 			        	d3.shuffle([
 									d3.easeElastic,
@@ -820,7 +888,7 @@ if (RTCPeerConnection) (function () {
 									d3.easeBack
 			        	])[0]
 		        	)
-								.attr('transform', function(d){ return getRandomInt(1,2) ? 'rotate(180)' : 'rotate(-180)' })
+								.attr('transform', function(d){ return random(1,2) ? 'rotate(180)' : 'rotate(-180)' })
 								.styles({
 									'stroke-opacity': d3.shuffle([0.0,.25,0.5])[0],
 									'fill-opacity':d3.shuffle([0.0,.25])[0],
@@ -832,6 +900,56 @@ if (RTCPeerConnection) (function () {
 		    });
 
 });
+
+
+//
+//
+//
+//const audioCtx = new window.AudioContext();
+//const oscillator = audioCtx.createOscillator();
+//oscillator.connect(audioCtx.destination);
+//oscillator.type = "sine";
+//
+//let numItems = 0
+//
+//oscillator.frequency.setValueAtTime(
+//  1,
+//  audioCtx.currentTime
+//);
+//
+//oscillator.start();
+//
+//const observer = new MutationObserver(function (mutationsList) {
+//  numItems += mutationsList.length
+//
+//  oscillator.frequency.setValueAtTime(
+//    Math.log(numItems + 1) * 440,
+//    audioCtx.currentTime
+//  );
+//
+//  setTimeout(() => {
+//    numItems -= mutationsList.length
+//    if (numItems === 0) {
+//      oscillator.frequency.setValueAtTime(
+//          1,
+//          audioCtx.currentTime
+//        )
+//    } else {
+//        oscillator.frequency.setValueAtTime(
+//          Math.log(numItems + 1) * 440,
+//          audioCtx.currentTime
+//        )
+//    }
+//  }, 100)
+//});
+//
+//observer.observe(document, {
+//  attributes: true,
+//  childList: true,
+//  subtree: true,
+//  characterData: true
+//});
+
 
 
 </script>
